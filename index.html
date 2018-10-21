@@ -7,17 +7,23 @@
     <title>Giftastic</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-    <div id="buttons">
-        <button data-television="the office">
-          The Office
-        </button>
-        <button data-television="parks and rec">
-          Parks and Rec
-        </button> 
-    </div>
-    <div id="gifs-appear-here">
+    <div class="container">
+        <h1 class="text-center">giphy Television</h1>
+        <br>
+        <div id="television-buttons"></div>
+        <br>
+        <div class="container" id="btn">
+            <form id="television-form">
+                <input type="text" class="form-control" id="television-input">
+            </form>
+            <br>
+            <button onclick="submitButtonClicked()" type="button" id="add-television" class="btn btn-success">Submit</button>
+            <br>
+            <div id="television"></div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
