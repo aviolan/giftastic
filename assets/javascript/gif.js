@@ -29,3 +29,10 @@ function searchGif(gifName) {
     })
 }
 
+function displayGif(response) {
+    $("#television").empty();
+    for ( var i = 0; i < response.data.length; i++) {
+        var rating = "<div class='ratings'> Rating: " + (response.data[i].rating) + "</div>";
+        
+    }
+}
