@@ -19,3 +19,13 @@ function submitButtonClicked () {
     }
 }
 
+function searchGif(gifName) {
+    $.ajax({
+        url: "http://api.giphy.com/v1/gifs/search?q= " + gifName + " &api_key=zkxPeruCYUg4IV4nKPU6kFuYTVX7vsmL",
+        type: "GET",
+    })
+    .done(function(response) {
+        displayGif(response);
+    })
+}
+
