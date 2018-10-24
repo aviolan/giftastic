@@ -43,7 +43,6 @@ function displayGif(response) {
         ' " data-still=" ' + response.data[i].images.fixed_height_still.url +
         ' " data-animate=" ' + response.data[i].images.fixed_height.url + ' " data-state="still" class="movImage" style="width: 300px; height: 300px">';
         
-        image = '<div class="col-md-4">' + image + "</div>";
         $('#television').append(image);
     }
 
