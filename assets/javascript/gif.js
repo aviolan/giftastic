@@ -26,7 +26,7 @@ function submitButtonClicked () {
 //Searchs for gifs using the AJAX and GET method. Includes my API Key, also limits search to 10 gifs.
 function searchGif(gifName) {
     $.ajax({
-        url: "http://api.giphy.com/v1/gifs/search?q= " + gifName + " &api_key=zkxPeruCYUg4IV4nKPU6kFuYTVX7vsmL&limit=10",
+        url: "https://api.giphy.com/v1/gifs/search?q= " + gifName + " &api_key=zkxPeruCYUg4IV4nKPU6kFuYTVX7vsmL&limit=10",
         type: "GET",
     })
     .done(function(response) {
