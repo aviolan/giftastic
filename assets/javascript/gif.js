@@ -4,7 +4,7 @@ var topics = ["The Office", "Parks and Rec", "Its Always Sunny In Philadelphia",
 //Dynamically creates buttons onto html page
 $(document).ready(function() {
     for (var i = 0; i < topics.length; i++) {
-        $("#television-buttons").append("<button type='button' onclick='searchGif(\"" + topics[i] + "\")' class='btn btn-primary' value=' " + topics[i] + "'>" + topics[i] + "</button>");
+        $("#television-buttons").append("<button type='button' onclick='searchGif(\"" + topics[i] + "\")' class='btn btn-primary' id='tv' value=' " + topics[i] + "'>" + topics[i] + "</button>");
     }
 });
 
@@ -19,14 +19,14 @@ function submitButtonClicked () {
     var userInput = $("#television-input").val();
 
     if (userInput) {
-        $("#television-buttons").append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' value=' " + userInput + "'> " + userInput + " </button>");
+        $("#television-buttons").append("<button type='button' onclick='searchGif(\"" + userInput + "\")' class='btn btn-primary' id='tv' value=' " + userInput + "'> " + userInput + " </button>");
     }
 }
 
-//Searchs for gifs using the AJAX and GET method. Includes my API Key
+//Searchs for gifs using the AJAX and GET method. Includes my API Key, also limits search to 10 gifs.
 function searchGif(gifName) {
     $.ajax({
-        url: "http://api.giphy.com/v1/gifs/search?q= " + gifName + " &api_key=zkxPeruCYUg4IV4nKPU6kFuYTVX7vsmL",
+        url: "http://api.giphy.com/v1/gifs/search?q= " + gifName + " &api_key=zkxPeruCYUg4IV4nKPU6kFuYTVX7vsmL&limit=10",
         type: "GET",
     })
     .done(function(response) {
