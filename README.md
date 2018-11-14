@@ -1,6 +1,4 @@
-# giftastic
-
-GIPHY API (https://aviolan.github.io/giftastic/)
+# giftastic (https://aviolan.github.io/giftastic/)
 
 I created this using HTML, CSS, Javascript, jQuery, and GIPHY API.
 
