@@ -1,6 +1,6 @@
 # giftastic
 
-GIPHY API
+GIPHY API (https://aviolan.github.io/giftastic/)
 
 I created this using HTML, CSS, Javascript, jQuery, and GIPHY API.
 
@@ -13,3 +13,4 @@ User then can submit their own search, and it dynamically creates a button in th
 After user adds a tv show, the button is created. Once the tv button is clicked, the GIPHY API will return 10 results.
 
 In order to play the gif, user must click the gif to animate, and click one more time to get the still.
+
